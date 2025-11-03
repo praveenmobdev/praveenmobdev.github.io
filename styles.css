@@ -115,20 +115,44 @@ section {
     margin-top: 2rem;
 }
 
+.project-swiper {
+    width: 100%;
+    padding: 50px 25px;
+    position: relative;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .project-card {
     background: #f8f9fa;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 40px; /* Space for pagination */
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    background: var(--primary-color);
-    color: white;
+/* Pagination Styling */
+.swiper-pagination {
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
 }
 
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--secondary-color);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .nav-content {
         flex-direction: column;
@@ -152,4 +176,17 @@ footer {
     .hero {
         padding-top: 6rem;
     }
+
+    .project-swiper {
+        padding: 30px 15px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+.mx-25{
+    margin: 25px 0px;
 }
